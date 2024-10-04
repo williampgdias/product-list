@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 // Import CSS
 import './style.css';
 
-// import images
-import addToCart from '../../../public/assets/images/icon-add-to-cart.svg';
+// Import components
+import EmptyCart from '../EmptyCart';
+import ItemCart from '../ItemCart';
 
 const Cards = () => {
     const [products, setProducts] = useState([]);
@@ -23,24 +24,13 @@ const Cards = () => {
                 <div className="productsContainer">
                     <div className="cardsContainer">
                         {products.map((product, index) => (
-                            <div key={index} className="card">
+                            <div key={index} className="cardProducts">
                                 <img
                                     className="dessertsImage"
                                     src={product.image.desktop}
                                     alt={product.name}
                                 />
-                                <div className="cartButtonContainer">
-                                    <button className="cartButton">
-                                        <img
-                                            className="mr-2"
-                                            src={addToCart}
-                                            alt="Add to cart"
-                                        />
-                                        <p className="lg:text-sm xl:text-xs 2xl:text-base">
-                                            Add to Cart
-                                        </p>
-                                    </button>
-                                </div>
+                                <ItemCart />
                                 <div className="dessertInfo">
                                     <p className="productCategory">
                                         {product.category}

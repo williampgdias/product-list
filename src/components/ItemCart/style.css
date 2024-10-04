@@ -1,0 +1,42 @@
+.decrementQuantity {
+    border: 1px solid white;
+}
+
+.itemCart {
+    background-color: #ca3b0d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border: 1px solid #ca3b0d;
+    width: 150px;
+    padding: 8px 10px;
+    border-radius: 50px;
+    cursor: auto !important;
+}
+
+.itemCartContainer {
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+}
+
+.btnQuantity {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, filter 0.3s ease;
+    border: 1px solid white;
+}
+
+.btnQuantity:hover {
+    background-color: #6b2108;
+    border: 1px solid #6b2108;
+}
+
+.cardQuantity {
+    color: #fff;
+}

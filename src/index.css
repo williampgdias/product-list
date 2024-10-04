@@ -8,3 +8,12 @@ body {
     font-family: 'Red Hat Text', sans-serif;
     background-color: #fcf8f6;
 }
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}

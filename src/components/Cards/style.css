@@ -2,6 +2,11 @@
     font-size: 4rem;
     font-weight: 600;
 }
+
+p {
+    margin-bottom: 0;
+}
+
 .productsContainer {
     display: flex;
     gap: 30px;
@@ -19,32 +24,39 @@
     border-radius: 10px;
 }
 
-.card {
+.dessertInfo {
+    padding-top: 30px;
+}
+
+.cardProducts {
     position: relative;
 }
 
-.cartButtonContainer {
+.cardButtonContainer {
     position: absolute;
-    bottom: 85px;
+    bottom: 70px;
     left: 70px;
 }
 
-.cartButton {
+.cardButton {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
-    border: 1px solid #000;
+    border: 1px solid #601c05;
     background-color: #fff;
-    padding: 8px 20px;
+    width: 150px;
+    padding: 8px 10px;
     border-radius: 50px;
 }
 
-.cartButton:hover {
-    background-color: #000;
-    color: #fff;
+.cardButton:hover {
+    border: 1px solid #ca3b0d;
+    color: #ca3b0d;
 }
 
-.dessertInfo {
-    padding-top: 40px;
+.cardText {
+    margin-bottom: 0;
 }
 
 .productCategory {

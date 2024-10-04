@@ -5,10 +5,10 @@ import './style.css';
 
 // Import components
 import EmptyCart from '../EmptyCart';
-import ItemCart from '../ItemCart';
 
 const Cards = () => {
     const [products, setProducts] = useState([]);
+    const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
         fetch('/public/data.json')

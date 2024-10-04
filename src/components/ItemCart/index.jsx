@@ -1,3 +1,4 @@
+// ItemCart.jsx
 import React, { useState } from 'react';
 
 // Import CSS
@@ -7,18 +8,25 @@ import './style.css';
 import decrementImage from '../../../public/assets/images/icon-decrement-quantity.svg';
 import incrementImage from '../../../public/assets/images/icon-increment-quantity.svg';
 
+// Import components
+import EmptyCart from '../EmptyCart';
+
 const ItemCart = () => {
-    const [increment, setIncrement] = useState(0);
+    const [quantity, setQuantity] = useState(1);
 
     const incrementQuantity = () => {
-        setIncrement(increment + 1);
+        setQuantity(quantity + 1);
     };
 
     const decrementQuantity = () => {
-        if (increment > 0) {
-            setIncrement(increment - 1);
+        if (quantity > 0) {
+            setQuantity(quantity - 1);
         }
     };
+
+    if (quantity === 0) {
+        return <EmptyCart />;
+    }
 
     return (
         <div className="itemCartContainer">
@@ -28,7 +36,7 @@ const ItemCart = () => {
                     src={decrementImage}
                     onClick={decrementQuantity}
                 />
-                <p className="cardQuantity">{increment}</p>
+                <p className="cardQuantity">{quantity}</p>
                 <img
                     className="btnQuantity incrementQuantity"
                     src={incrementImage}

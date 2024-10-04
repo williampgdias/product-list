@@ -1,0 +1,23 @@
+.cartContainer {
+    background-color: #fff;
+    height: 100%;
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cartTitle {
+    color: #b23515;
+    text-align: left;
+}
+
+.cartImage {
+    padding: 20px;
+}
+
+.cartInfo {
+    color: #b18f8b;
+    font-size: 0.9rem;
+}

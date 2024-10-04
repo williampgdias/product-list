@@ -3,11 +3,15 @@ import './App.css';
 
 // import components
 import Cards from './components/Cards';
+import Cart from './components/Cart';
 
 function App() {
     return (
         <>
-            <Cards />
+            <div className="container">
+                <Cards />
+                <Cart />
+            </div>
         </>
     );
 }

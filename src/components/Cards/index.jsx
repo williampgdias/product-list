@@ -1,9 +1,9 @@
-import './styles.css';
-
 import React, { useEffect, useState } from 'react';
 
+// Import CSS
+import './style.css';
+
 // import images
-import emptyCart from '../../../public/assets/images/illustration-empty-cart.svg';
 import addToCart from '../../../public/assets/images/icon-add-to-cart.svg';
 
 const Cards = () => {
@@ -21,8 +21,6 @@ const Cards = () => {
             <main className="productList">
                 <h1 className="title">Desserts</h1>
                 <div className="productsContainer">
-                    {/* Seção de Produtos */}
-                    {/* Products Section */}
                     <div className="cardsContainer">
                         {products.map((product, index) => (
                             <div key={index} className="card">
@@ -56,22 +54,6 @@ const Cards = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-
-                    {/* Seção do Carrinho */}
-                    {/* Cart Section */}
-                    <div className="h-fit border rounded-lg p-4 shadow-lg">
-                        <h2 className="text-2xl text-[#B23515] font-semibold mb-4">
-                            Your Cart (0)
-                        </h2>
-                        <img
-                            className="mx-auto mb-4"
-                            src={emptyCart}
-                            alt="Empty cart"
-                        />
-                        <p className="text-center text-sm text-[#B18F8B]">
-                            Your added items will appear here
-                        </p>
                     </div>
                 </div>
             </main>

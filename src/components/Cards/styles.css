@@ -1,4 +1,69 @@
-.product-list {
+.productList {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 600;
+}
+.productsContainer {
     display: flex;
-    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+}
+
+.dessertsImage {
+    max-width: 300px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.card {
+    position: relative;
+}
+
+.cartButtonContainer {
+    position: absolute;
+    bottom: 85px;
+    left: 70px;
+}
+
+.cartButton {
+    display: flex;
+    gap: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.cartButton:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.dessertInfo {
+    padding-top: 40px;
+}
+
+.productCategory {
+    color: #c6b0a9;
+    font-size: 0.8rem;
+}
+
+.productName {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.productPrice {
+    color: #b23515;
+    font-size: 0.95rem;
+    font-weight: 600;
 }

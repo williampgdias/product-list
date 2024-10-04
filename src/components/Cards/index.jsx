@@ -20,7 +20,7 @@ const Cards = () => {
                     <div key={index} className="product">
                         <img src={product.image.thumbnail} alt={product.name} />
                         <p>{product.category}</p>
-                        <h2>{product.name}</h2>
+                        <h2 className="">{product.name}</h2>
                         <p>${product.price.toFixed(2)}</p>
                     </div>
                 ))}

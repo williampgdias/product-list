@@ -30,7 +30,7 @@ const Cards = () => {
                                     src={product.image.desktop}
                                     alt={product.name}
                                 />
-                                <ItemCart />
+                                <EmptyCart />
                                 <div className="dessertInfo">
                                     <p className="productCategory">
                                         {product.category}

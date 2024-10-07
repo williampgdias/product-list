@@ -5,10 +5,10 @@ import './style.css';
 
 // Import components
 import EmptyCart from '../EmptyCart';
+import FullCart from '../FullCart';
 
-const Cards = () => {
+const Cards = ({ setIsCartEmpty }) => {
     const [products, setProducts] = useState([]);
-    const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
         fetch('/public/data.json')
@@ -30,7 +30,7 @@ const Cards = () => {
                                     src={product.image.desktop}
                                     alt={product.name}
                                 />
-                                <EmptyCart />
+                                <EmptyCart setIsCartEmpty={setIsCartEmpty} />
                                 <div className="dessertInfo">
                                     <p className="productCategory">
                                         {product.category}

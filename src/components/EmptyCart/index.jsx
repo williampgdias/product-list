@@ -6,15 +6,16 @@ import ItemCart from '../ItemCart';
 // import images
 import addToCart from '../../../public/assets/images/icon-add-to-cart.svg';
 
-const EmptyCart = () => {
+const EmptyCart = ({ setIsCartEmpty }) => {
     const [isItemAdded, setIsItemAdded] = useState(false);
 
     const handleClick = () => {
         setIsItemAdded(true);
+        setIsCartEmpty(false);
     };
 
     if (isItemAdded) {
-        return <ItemCart />;
+        return <ItemCart setIsCartEmpty={setIsCartEmpty} />;
     }
 
     return (

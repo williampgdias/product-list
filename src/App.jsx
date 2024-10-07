@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 // import components
@@ -6,11 +6,13 @@ import Cards from './components/Cards';
 import Cart from './components/Cart';
 
 function App() {
+    const [isCartEmpty, setIsCartEmpty] = useState(true);
+
     return (
         <>
             <div className="container">
-                <Cards />
-                <Cart />
+                <Cart isCartEmpty={isCartEmpty} />
+                <Cards setIsCartEmpty={setIsCartEmpty} />
             </div>
         </>
     );

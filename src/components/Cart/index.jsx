@@ -9,13 +9,7 @@ import './style.css';
 // import images
 import emptyCart from '../../../public/assets/images/illustration-empty-cart.svg';
 
-const Cart = () => {
-    const [isCartEmpty, setIsCartEmpty] = useState(true);
-
-    const handleAddToCart = () => {
-        setIsCartEmpty(false);
-    };
-
+const Cart = ({ isCartEmpty }) => {
     return (
         <>
             <aside className="cartContainer fixed-lg">

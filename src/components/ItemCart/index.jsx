@@ -11,7 +11,7 @@ import incrementImage from '../../../public/assets/images/icon-increment-quantit
 // Import components
 import EmptyCart from '../EmptyCart';
 
-const ItemCart = () => {
+const ItemCart = ({ setIsCartEmpty }) => {
     const [quantity, setQuantity] = useState(1);
 
     const incrementQuantity = () => {
@@ -19,13 +19,16 @@ const ItemCart = () => {
     };
 
     const decrementQuantity = () => {
-        if (quantity > 0) {
+        if (quantity > 1) {
             setQuantity(quantity - 1);
+        } else {
+            setQuantity(0);
+            setIsCartEmpty(true);
         }
     };
 
     if (quantity === 0) {
-        return <EmptyCart />;
+        return <EmptyCart setIsCartEmpty={setIsCartEmpty} />;
     }
 
     return (

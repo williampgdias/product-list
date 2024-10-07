@@ -6,7 +6,7 @@ import './style.css';
 const FullCart = () => {
     return (
         <>
-            <h1>Classic Tiramisu</h1>
+            <h1>Item no Carrinho</h1>
         </>
     );
 };

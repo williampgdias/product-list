@@ -1,7 +1,7 @@
 import React from 'react';
 
 // CSS
-import './FullCart.css';
+import './style.css';
 
 const FullCart = () => {
     return (
